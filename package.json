@@ -1,0 +1,30 @@
+{
+  "name": "burgermatic",
+  "version": "1.0.0",
+  "description": "An exciting application to needlessly sort burger inventory, implemented with with MySQL, Node, Express, Handlebars and a hand-rolled ORM.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p2bilt/Burgermatic.git"
+  },
+  "author": "Peter Johnstone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p2bilt/Burgermatic/issues"
+  },
+  "homepage": "https://github.com/p2bilt/Burgermatic#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "mysql": "^2.10.2",
+    "sequelize": "^4.37.1"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  }
+}
