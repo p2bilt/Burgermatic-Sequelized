@@ -2,12 +2,13 @@ const express = require("express");
 
 const router = express.Router();
 
-// Import the model (burger.js) to use its database functions.
-const burger = require("../models/burger.js");
-
-console.log("I got this burger.js! -- " + burger);
+// // Import the model (burger.js) to use its database functions.
+// const burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+
+// this file is old, see api-routes.js instead
+
 router.get("/", function(req, res) {
   burger.all(function(data) {
     const hbsObject = {

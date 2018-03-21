@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
+const db = require("./models");
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
@@ -21,9 +23,13 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-const routes = require("./controllers/burgersController.js");
+// const routes = require("./controllers/burgersController.js");
 
-app.use(routes);
+// Routes
+// =============================================================
+require("./routes/api-routes")(app);
+
+// app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () => {
