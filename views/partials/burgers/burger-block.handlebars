@@ -1,8 +1,8 @@
 <li class="{{eaten}}">
-	{{burger_name}} 
-	<button class="change-eaten btn btn-{{eaten}} btn-sm" data-id="{{id}}" data-neweaten="{{eaten}}">
+	{{dataValues.burger_name}}
+	<button class="change-eaten btn btn-{{eaten}} btn-sm" data-id="{{dataValues.id}}" data-neweaten="{{eaten}}">
 		{{#if eaten}}CONSUME!{{else}}REGURGITATE!{{/if}}
-	</button> <button class="delete btn btn-danger btn-sm" data-id="{{id}}">
+	</button> <button class="delete btn btn-danger btn-sm" data-id="{{dataValues.id}}">
 		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 	</button>
 </li>

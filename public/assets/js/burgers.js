@@ -15,9 +15,10 @@ $(function() {
       data: newEatenState
     }).then(
       function() {
-        console.log("changed eaten to", newEaten);
+        
         // Reload the page to get the updated list
         location.reload();
+        console.log("changed eaten to", newEaten);
       }
     );
   });
@@ -45,7 +46,7 @@ $(function() {
   });
 
   $(".delete").on("click", function(event) {
-    const id = $(event.target).data("id");
+    const id = $(this).data("id");
 
     // Send the DELETE request.
     $.ajax("/api/burgers/" + id, {
@@ -55,6 +56,6 @@ $(function() {
         // Reload the page to get the updated list
         location.reload();
     });
-});
+  });
 
 });

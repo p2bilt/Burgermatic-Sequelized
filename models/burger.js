@@ -32,22 +32,12 @@
 
 module.exports = (db, dbType) =>
     db.define("Burger", {
-        burger_name: {
-            type: dbType.STRING,
-            // AllowNull controls whether the column value can be NULL
-            allowNull: false,
-            // len is a validation that limits the column length to a range
-            validate: {
-                len: [1, 140]
-            }
-        },
-        eaten: {
-            type: dbType.BOOLEAN,
-            // defaultValue sets a value to use if the column isn't supplied one
-            defaultValue: false
-        }
+        burger_name: dbType.STRING,
+        eaten: dbType.BOOLEAN
+
     }
     , {
-    timestamps: false
+    timestamps: false,
+    tableName: 'burgers'
 });
  
